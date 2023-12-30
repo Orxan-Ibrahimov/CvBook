@@ -1,0 +1,75 @@
+@import "color";
+@import "reset";
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > .book {
+    background-color: $coverColor;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    & > .page {
+      width: 350px;
+      height: 500px;
+      background-color: $pageColor;
+
+      & > .about {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > .profile {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          border: 3px solid $coverColor;
+        }
+
+        & > .profession {
+          color: $coverColor;
+          font-weight: 900;
+          text-transform: capitalize;
+        }
+
+        & > .social-list {
+          display: flex;
+          margin: 0.5rem 0;
+          & > .social-item {
+            margin: 0 0.2rem;
+            & > .social-link {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 1px solid $coverColor;
+              color: $coverColor;
+            }
+          }
+        }
+
+        & > .biography {
+          font-size: small;
+          padding: 1.3rem;
+          font-family: cursive;
+        }
+
+        
+      }
+
+      &.page-2 {
+        background-color: $coverColor2;
+      }
+    }
+  }
+}

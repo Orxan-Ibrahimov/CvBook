@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, monospace;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+ .buton {
+    display: inline-block;
+    border: 1px solid $coverColor;
+    width: 150px;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: $coverColor;
+    margin: 0 0.5rem;
+    text-align: center;
+  }
+
+  .buton-fill {
+    background-color: $coverColor;
+    color: $pageColor;
+  }
