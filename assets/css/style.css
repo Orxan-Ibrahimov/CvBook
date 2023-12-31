@@ -43,7 +43,7 @@ ul, ol {
 }
 .container > .wrapper {
   position: relative;
-  width: 55rem;
+  width: 56rem;
   height: 42rem;
 }
 .container > .wrapper > .cover {
@@ -76,7 +76,7 @@ ul, ol {
   transform-style: preserve-3d;
   transition: 1s all;
 }
-.container > .wrapper > .book > .page > .page-title {
+.container > .wrapper > .book > .page .page-title {
   text-transform: capitalize;
   text-align: center;
   margin: 1rem 0;
@@ -126,27 +126,34 @@ ul, ol {
   padding: 1.3rem;
   font-family: cursive;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list {
+.container > .wrapper > .book > .page > .front, .container > .wrapper > .book > .page > .back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list {
   padding: 0 1.5rem;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item {
   padding: 0 1.5rem 1rem;
   position: relative;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item:last-of-type {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item:last-of-type, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item:last-of-type {
   padding-bottom: 0;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item > .expreience-date {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item > .expreience-date, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item > .expreience-date {
   color: #00abf0;
   font-weight: bold;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item > .experience-title {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item > .experience-title, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item > .experience-title {
   font-weight: 900;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item > .experience-text {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item > .experience-text, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item > .experience-text {
   font-family: cursive;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item::before {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item::before, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item::before {
   content: "";
   position: absolute;
   height: 20px;
@@ -157,7 +164,7 @@ ul, ol {
   left: 0;
   z-index: 1;
 }
-.container > .wrapper > .book > .page > .work-experience > .experience-list > .experience-item::after {
+.container > .wrapper > .book > .page > .front > .work-experience > .experience-list > .experience-item::after, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list > .experience-item::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -166,6 +173,37 @@ ul, ol {
   left: 0;
   top: 0;
   transform: translateX(10px);
+}
+.container > .wrapper > .book > .page > .front > .pagination, .container > .wrapper > .book > .page > .back > .pagination {
+  position: relative;
+  margin: 2rem 0;
+}
+.container > .wrapper > .book > .page > .front > .pagination > p.page-number, .container > .wrapper > .book > .page > .back > .pagination > p.page-number {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container > .wrapper > .book > .page > .front > .pagination > .next, .container > .wrapper > .book > .page > .back > .pagination > .next {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: calc(100% - 2.4rem);
+}
+.container > .wrapper > .book > .page > .front > .pagination > .previous, .container > .wrapper > .book > .page > .back > .pagination > .previous {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 2.4rem;
+}
+.container > .wrapper > .book > .page > .front {
+  backface-visibility: hidden;
+  transform: rotateY(0deg) translateZ(1px);
+}
+.container > .wrapper > .book > .page > .back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+.container > .wrapper > .book > .page-turned {
+  transform: rotateY(180deg);
 }
 .container > .wrapper > .book > .page-right {
   left: 50%;

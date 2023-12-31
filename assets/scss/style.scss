@@ -10,7 +10,7 @@
 
   & > .wrapper {
     position: relative;
-    width: 55rem;
+    width: 56rem;
     height: 42rem;
 
     & > .cover {
@@ -25,20 +25,18 @@
     }
 
     & > .turn {
-        transform: rotateY(180deg);
+      transform: rotateY(180deg);
     }
-    
+
     & > .book {
       width: 100%;
       height: 100%;
       display: flex;
       padding: 1.2rem;
       position: relative;
-     
 
       & > .page {
         position: absolute;
-        // left: 0;
         width: calc(50% - 1.2rem);
         height: calc(100% - 2.4rem);
         background: $page-color;
@@ -47,12 +45,11 @@
         transform-style: preserve-3d;
         transition: 1s all;
 
-        & > .page-title {
+        .page-title {
           text-transform: capitalize;
           text-align: center;
           margin: 1rem 0;
         }
-
         & > .about {
           width: 100%;
           height: 100%;
@@ -87,11 +84,11 @@
                 border-radius: 50%;
                 border: 1px solid $main-color;
                 color: $main-color;
-                transition: .3s;
+                transition: 0.3s;
 
-                &:hover{
-                    color: $main-text-color;
-                    background-color: $main-color;
+                &:hover {
+                  color: $main-text-color;
+                  background-color: $main-color;
                 }
               }
             }
@@ -103,62 +100,105 @@
           }
         }
 
-        & > .work-experience {
-          & > .experience-list {
-            padding: 0 1.5rem;
+     
 
-            & > .experience-item {
-              padding: 0 1.5rem 1rem;
-              position: relative;
+        & > .front,
+        & > .back {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
 
-              &:last-of-type{
-                padding-bottom: 0;
-              }
-              & > .expreience-date {
-                color: $main-color;
-                font-weight: bold;
-              }
+          & > .work-experience {
+            & > .experience-list {
+              padding: 0 1.5rem;
 
-              & > .experience-title {
-                font-weight: 900;
-              }
+              & > .experience-item {
+                padding: 0 1.5rem 1rem;
+                position: relative;
 
-              & > .experience-text {
-                font-family: cursive;
-              }
+                &:last-of-type {
+                  padding-bottom: 0;
+                }
+                & > .expreience-date {
+                  color: $main-color;
+                  font-weight: bold;
+                }
 
-              &::before {
-                content: "";
-                position: absolute;
-                height: 20px;
-                width: 20px;
-                border-radius: 50%;
-                background: $cover-color;
-                top: 0;
-                left: 0;
-                z-index: 1;
-              }
+                & > .experience-title {
+                  font-weight: 900;
+                }
 
-              &::after {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 1px;
-                background: $cover-color;
-                left: 0;
-                top: 0;
-                transform: translateX(10px);
+                & > .experience-text {
+                  font-family: cursive;
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  height: 20px;
+                  width: 20px;
+                  border-radius: 50%;
+                  background: $cover-color;
+                  top: 0;
+                  left: 0;
+                  z-index: 1;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  height: 100%;
+                  width: 1px;
+                  background: $cover-color;
+                  left: 0;
+                  top: 0;
+                  transform: translateX(10px);
+                }
               }
             }
           }
+          & > .pagination {
+            position: relative;
+            margin: 2rem 0;
+  
+            & > p.page-number {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+  
+            & > .next {
+              background-color: transparent;
+              border: none;
+              position: absolute;
+              left: calc(100% - 2.4rem);
+            }
+  
+            & > .previous {
+              background-color: transparent;
+              border: none;
+              position: absolute;
+              left: 2.4rem;
+            }
+          }
+        }
+        & > .front {
+          backface-visibility: hidden;
+          transform: rotateY(0deg) translateZ(1px);
         }
 
-        //   &.page-2 {
-        //     background-color: $coverColor2;
-        //   }
+        & > .back {
+          transform: rotateY(180deg) translateZ(1px);
+        }
       }
 
-      & > .page-right{
+      & > .page-turned {
+        transform: rotateY(180deg);
+      }
+
+      & > .page-right {
         left: 50%;
       }
     }
