@@ -64,12 +64,17 @@ ul, ol {
   height: 100%;
   display: flex;
   padding: 1.2rem;
+  position: relative;
 }
 .container > .wrapper > .book > .page {
-  width: 50%;
-  height: 100%;
+  position: absolute;
+  width: calc(50% - 1.2rem);
+  height: calc(100% - 2.4rem);
   background: linear-gradient(90deg, #fff, #ddd);
   z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 1s all;
 }
 .container > .wrapper > .book > .page > .page-title {
   text-transform: capitalize;
@@ -161,4 +166,7 @@ ul, ol {
   left: 0;
   top: 0;
   transform: translateX(10px);
+}
+.container > .wrapper > .book > .page-right {
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */

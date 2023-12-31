@@ -33,12 +33,19 @@
       height: 100%;
       display: flex;
       padding: 1.2rem;
+      position: relative;
+     
 
       & > .page {
-        width: 50%;
-        height: 100%;
+        position: absolute;
+        // left: 0;
+        width: calc(50% - 1.2rem);
+        height: calc(100% - 2.4rem);
         background: $page-color;
         z-index: 1;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transition: 1s all;
 
         & > .page-title {
           text-transform: capitalize;
@@ -149,6 +156,10 @@
         //   &.page-2 {
         //     background-color: $coverColor2;
         //   }
+      }
+
+      & > .page-right{
+        left: 50%;
       }
     }
   }
