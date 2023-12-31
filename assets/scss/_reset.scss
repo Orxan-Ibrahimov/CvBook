@@ -12,16 +12,22 @@ ul,ol{
 }
  .buton {
     display: inline-block;
-    border: 1px solid $coverColor;
+    border: 1px solid $main-color;
     width: 150px;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    color: $coverColor;
+    color: $main-color;
     margin: 0 0.5rem;
     text-align: center;
+    transition: .3s all;
+
+    &:hover{
+        color: $main-text-color;
+        background-color: $main-color;
+    }
   }
 
   .buton-fill {
-    background-color: $coverColor;
-    color: $pageColor;
+    background-color: $main-color;
+    color: $main-text-color;
   }
