@@ -35,15 +35,13 @@ ul, ol {
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .container > .wrapper {
   position: relative;
-  width: 56rem;
+  width: 60rem;
   height: 42rem;
 }
 .container > .wrapper > .cover {
@@ -173,6 +171,36 @@ ul, ol {
   left: 0;
   top: 0;
   transform: translateX(10px);
+}
+.container > .wrapper > .book > .page > .front > .services, .container > .wrapper > .book > .page > .back > .services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container > .wrapper > .book > .page > .front > .services > .service, .container > .wrapper > .book > .page > .back > .services > .service {
+  width: 45%;
+  border: 3px solid #00abf0;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-header, .container > .wrapper > .book > .page > .back > .services > .service > .service-header {
+  text-align: center;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-header > .service-icon, .container > .wrapper > .book > .page > .back > .services > .service > .service-header > .service-icon {
+  color: #00abf0;
+  font-size: x-large;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-body > .service-title, .container > .wrapper > .book > .page > .front > .services > .service > .service-body > .service-text, .container > .wrapper > .book > .page > .back > .services > .service > .service-body > .service-title, .container > .wrapper > .book > .page > .back > .services > .service > .service-body > .service-text {
+  text-align: center;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-body > .service-title, .container > .wrapper > .book > .page > .back > .services > .service > .service-body > .service-title {
+  margin: 0.5rem 0;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-body > .service-text, .container > .wrapper > .book > .page > .back > .services > .service > .service-body > .service-text {
+  margin: 1rem 0;
+}
+.container > .wrapper > .book > .page > .front > .services > .service > .service-footer .buton, .container > .wrapper > .book > .page > .back > .services > .service > .service-footer .buton {
+  font-size: medium;
 }
 .container > .wrapper > .book > .page > .front > .pagination, .container > .wrapper > .book > .page > .back > .pagination {
   position: relative;

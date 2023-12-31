@@ -2,15 +2,15 @@
 @import "reset";
 
 .container {
-  width: 100%;
-  height: 100vh;
+  // width: 100%;
+  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   & > .wrapper {
     position: relative;
-    width: 56rem;
+    width: 60rem;
     height: 42rem;
 
     & > .cover {
@@ -100,8 +100,6 @@
           }
         }
 
-     
-
         & > .front,
         & > .back {
           height: 100%;
@@ -159,23 +157,63 @@
               }
             }
           }
+          & > .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            & > .service {
+              width: 45%;
+              border: 3px solid $main-color;
+              padding: 1rem;
+              margin: .5rem 0;
+              & > .service-header {
+                text-align: center;
+
+                & > .service-icon {
+                  color: $main-color;
+                  font-size: x-large;
+                }
+              }
+
+              & > .service-body {
+                
+                & > .service-title,
+                & > .service-text {
+                  text-align: center;                  
+                }
+                & > .service-title{
+                  margin: .5rem 0;
+                }
+
+                & > .service-text{
+                  margin: 1rem 0;
+                }
+              }
+
+              & > .service-footer {
+                .buton{
+                  font-size: medium;
+                }
+              }
+            }
+          }
           & > .pagination {
             position: relative;
             margin: 2rem 0;
-  
+
             & > p.page-number {
               position: absolute;
               left: 50%;
               transform: translateX(-50%);
             }
-  
+
             & > .next {
               background-color: transparent;
               border: none;
               position: absolute;
               left: calc(100% - 2.4rem);
             }
-  
+
             & > .previous {
               background-color: transparent;
               border: none;
