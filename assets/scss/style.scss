@@ -234,6 +234,7 @@
 
       & > .page-turned {
         transform: rotateY(180deg);
+        z-index: 3;
       }
 
       & > .page-right {

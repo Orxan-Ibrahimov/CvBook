@@ -232,6 +232,7 @@ ul, ol {
 }
 .container > .wrapper > .book > .page-turned {
   transform: rotateY(180deg);
+  z-index: 3;
 }
 .container > .wrapper > .book > .page-right {
   left: 50%;
