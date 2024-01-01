@@ -233,18 +233,22 @@
               transform: translateX(-50%);
             }
 
-            & > .next {
+            & > button{
               background-color: transparent;
               border: none;
               position: absolute;
+              transition: 1s all;
+
+              &:hover{
+                color: $main-color;
+              }
+            }
+
+            & > .next {             
               left: calc(100% - 2.4rem);
             }
 
-            & > .previous {
-              background-color: transparent;
-              border: none;
-              position: absolute;
-            }
+            
           }
         }
         & > .front {

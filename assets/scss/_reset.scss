@@ -10,6 +10,9 @@ a{
 ul,ol{
     list-style: none;
 }
+a,button{
+    cursor: pointer;
+}
  .buton {
     display: inline-block;
     border: 1px solid $main-color;
@@ -30,4 +33,9 @@ ul,ol{
   .buton-fill {
     background-color: $main-color;
     color: $main-text-color;
+
+    &:hover{
+        background-color: transparent;
+        color: $main-color;
+    }
   }

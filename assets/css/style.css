@@ -13,6 +13,10 @@ ul, ol {
   list-style: none;
 }
 
+a, button {
+  cursor: pointer;
+}
+
 .buton {
   display: inline-block;
   border: 1px solid #00abf0;
@@ -32,6 +36,10 @@ ul, ol {
 .buton-fill {
   background-color: #00abf0;
   color: #fff;
+}
+.buton-fill:hover {
+  background-color: transparent;
+  color: #00abf0;
 }
 
 .container {
@@ -234,16 +242,17 @@ ul, ol {
   left: 50%;
   transform: translateX(-50%);
 }
-.container > .wrapper > .book > .page > .front > .pagination > .next, .container > .wrapper > .book > .page > .back > .pagination > .next {
+.container > .wrapper > .book > .page > .front > .pagination > button, .container > .wrapper > .book > .page > .back > .pagination > button {
   background-color: transparent;
   border: none;
   position: absolute;
-  left: calc(100% - 2.4rem);
+  transition: 1s all;
 }
-.container > .wrapper > .book > .page > .front > .pagination > .previous, .container > .wrapper > .book > .page > .back > .pagination > .previous {
-  background-color: transparent;
-  border: none;
-  position: absolute;
+.container > .wrapper > .book > .page > .front > .pagination > button:hover, .container > .wrapper > .book > .page > .back > .pagination > button:hover {
+  color: #00abf0;
+}
+.container > .wrapper > .book > .page > .front > .pagination > .next, .container > .wrapper > .book > .page > .back > .pagination > .next {
+  left: calc(100% - 2.4rem);
 }
 .container > .wrapper > .book > .page > .front {
   backface-visibility: hidden;
