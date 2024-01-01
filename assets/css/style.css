@@ -41,8 +41,8 @@ ul, ol {
 }
 .container > .wrapper {
   position: relative;
-  width: 60rem;
-  height: 42rem;
+  width: 66rem;
+  height: 43rem;
 }
 .container > .wrapper > .cover {
   position: absolute;
@@ -130,6 +130,7 @@ ul, ol {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 0 2rem;
 }
 .container > .wrapper > .book > .page > .front > .work-experience > .experience-list, .container > .wrapper > .book > .page > .back > .work-experience > .experience-list {
   padding: 0 1.5rem;
@@ -202,9 +203,31 @@ ul, ol {
 .container > .wrapper > .book > .page > .front > .services > .service > .service-footer .buton, .container > .wrapper > .book > .page > .back > .services > .service > .service-footer .buton {
   font-size: medium;
 }
+.container > .wrapper > .book > .page > .front > .skills, .container > .wrapper > .book > .page > .back > .skills {
+  margin: 1rem 0;
+}
+.container > .wrapper > .book > .page > .front > .skills > .skill-list, .container > .wrapper > .book > .page > .back > .skills > .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container > .wrapper > .book > .page > .front > .skills > .skill-list > .skill-item, .container > .wrapper > .book > .page > .back > .skills > .skill-list > .skill-item {
+  border: 2px solid #00abf0;
+  width: 100px;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  margin-left: 0;
+}
+.container > .wrapper > .book > .page > .front > .skills > .skill-list > .skill-item > .skill-icon, .container > .wrapper > .book > .page > .back > .skills > .skill-list > .skill-item > .skill-icon {
+  color: #00abf0;
+  font-size: 3rem;
+}
 .container > .wrapper > .book > .page > .front > .pagination, .container > .wrapper > .book > .page > .back > .pagination {
-  position: relative;
-  margin: 2rem 0;
+  position: fixed;
+  width: calc(100% - 2.4rem);
+  top: calc(100% - 2.4rem);
 }
 .container > .wrapper > .book > .page > .front > .pagination > p.page-number, .container > .wrapper > .book > .page > .back > .pagination > p.page-number {
   position: absolute;
@@ -221,7 +244,6 @@ ul, ol {
   background-color: transparent;
   border: none;
   position: absolute;
-  left: 2.4rem;
 }
 .container > .wrapper > .book > .page > .front {
   backface-visibility: hidden;

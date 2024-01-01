@@ -10,8 +10,8 @@
 
   & > .wrapper {
     position: relative;
-    width: 60rem;
-    height: 42rem;
+    width: 66rem;
+    height: 43rem;
 
     & > .cover {
       position: absolute;
@@ -107,6 +107,7 @@
           position: absolute;
           top: 0;
           left: 0;
+          padding: 0 2rem;
 
           & > .work-experience {
             & > .experience-list {
@@ -165,7 +166,7 @@
               width: 45%;
               border: 3px solid $main-color;
               padding: 1rem;
-              margin: .5rem 0;
+              margin: 0.5rem 0;
               & > .service-header {
                 text-align: center;
 
@@ -176,30 +177,55 @@
               }
 
               & > .service-body {
-                
                 & > .service-title,
                 & > .service-text {
-                  text-align: center;                  
+                  text-align: center;
                 }
-                & > .service-title{
-                  margin: .5rem 0;
+                & > .service-title {
+                  margin: 0.5rem 0;
                 }
 
-                & > .service-text{
+                & > .service-text {
                   margin: 1rem 0;
                 }
               }
 
               & > .service-footer {
-                .buton{
+                .buton {
                   font-size: medium;
                 }
               }
             }
           }
+
+          & > .skills {
+            margin: 1rem 0;
+
+            & > .skill-list {
+              display: flex;
+              flex-wrap: wrap;
+              
+              & > .skill-item {
+                border: 2px solid $main-color;
+                width: 100px;
+                height: fit-content;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                text-align: center;
+                border-radius: 0.4rem;
+                margin-left: 0;
+
+                & > .skill-icon {
+                  color: $main-color;
+                  font-size: 3rem;
+                }
+              }
+            }
+          }
           & > .pagination {
-            position: relative;
-            margin: 2rem 0;
+            position: fixed;
+            width: calc(100% - 2.4rem);
+            top: calc(100% - 2.4rem);
 
             & > p.page-number {
               position: absolute;
@@ -218,7 +244,6 @@
               background-color: transparent;
               border: none;
               position: absolute;
-              left: 2.4rem;
             }
           }
         }
