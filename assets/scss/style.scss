@@ -11,7 +11,7 @@
   & > .wrapper {
     position: relative;
     width: 66rem;
-    height: 43rem;
+    height: 44rem;
 
     & > .cover {
       position: absolute;
@@ -204,7 +204,7 @@
             & > .skill-list {
               display: flex;
               flex-wrap: wrap;
-              
+
               & > .skill-item {
                 border: 2px solid $main-color;
                 width: 100px;
@@ -222,6 +222,59 @@
               }
             }
           }
+          & > .project {
+            & > .project-header {
+              border-radius: 1rem;
+              border: 2px solid $main-color;
+              overflow: hidden;
+              &:hover {
+                & > .project-image {
+                  transform: scale(1.1);
+                }
+              }
+              & > .project-image {
+                width: 100%;
+                transition: 0.5s all;
+              }
+            }
+            & > .project-body {
+              & > .project-caption {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 1rem 0;
+
+                & > .preview {
+                  color: $main-color;
+                }
+              }
+
+              & > .project-subtitle {
+                margin: 0.5rem 0;
+              }
+
+              & > .project-text {
+                font-family: cursive;
+              }
+            }
+            & > .project-footer {
+              text-align: center;
+              padding: 1rem 0;
+            }
+          }
+          & > .contact {
+            text-align: center;
+
+            & > .form-group {
+              margin: 1rem 0;
+              & > .form-contact {
+                width: 100%;
+                padding: 0.7rem 0.5rem;
+                border: 2px solid $main-color;
+              }
+            }
+           
+          }
           & > .pagination {
             position: fixed;
             width: calc(100% - 2.4rem);
@@ -233,22 +286,20 @@
               transform: translateX(-50%);
             }
 
-            & > button{
+            & > button {
               background-color: transparent;
               border: none;
               position: absolute;
               transition: 1s all;
 
-              &:hover{
+              &:hover {
                 color: $main-color;
               }
             }
 
-            & > .next {             
+            & > .next {
               left: calc(100% - 2.4rem);
             }
-
-            
           }
         }
         & > .front {

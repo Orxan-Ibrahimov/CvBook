@@ -50,7 +50,7 @@ a, button {
 .container > .wrapper {
   position: relative;
   width: 66rem;
-  height: 43rem;
+  height: 44rem;
 }
 .container > .wrapper > .cover {
   position: absolute;
@@ -231,6 +231,48 @@ a, button {
 .container > .wrapper > .book > .page > .front > .skills > .skill-list > .skill-item > .skill-icon, .container > .wrapper > .book > .page > .back > .skills > .skill-list > .skill-item > .skill-icon {
   color: #00abf0;
   font-size: 3rem;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-header, .container > .wrapper > .book > .page > .back > .project > .project-header {
+  border-radius: 1rem;
+  border: 2px solid #00abf0;
+  overflow: hidden;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-header:hover > .project-image, .container > .wrapper > .book > .page > .back > .project > .project-header:hover > .project-image {
+  transform: scale(1.1);
+}
+.container > .wrapper > .book > .page > .front > .project > .project-header > .project-image, .container > .wrapper > .book > .page > .back > .project > .project-header > .project-image {
+  width: 100%;
+  transition: 0.5s all;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-body > .project-caption, .container > .wrapper > .book > .page > .back > .project > .project-body > .project-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-body > .project-caption > .preview, .container > .wrapper > .book > .page > .back > .project > .project-body > .project-caption > .preview {
+  color: #00abf0;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-body > .project-subtitle, .container > .wrapper > .book > .page > .back > .project > .project-body > .project-subtitle {
+  margin: 0.5rem 0;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-body > .project-text, .container > .wrapper > .book > .page > .back > .project > .project-body > .project-text {
+  font-family: cursive;
+}
+.container > .wrapper > .book > .page > .front > .project > .project-footer, .container > .wrapper > .book > .page > .back > .project > .project-footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+.container > .wrapper > .book > .page > .front > .contact, .container > .wrapper > .book > .page > .back > .contact {
+  text-align: center;
+}
+.container > .wrapper > .book > .page > .front > .contact > .form-group, .container > .wrapper > .book > .page > .back > .contact > .form-group {
+  margin: 1rem 0;
+}
+.container > .wrapper > .book > .page > .front > .contact > .form-group > .form-contact, .container > .wrapper > .book > .page > .back > .contact > .form-group > .form-contact {
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  border: 2px solid #00abf0;
 }
 .container > .wrapper > .book > .page > .front > .pagination, .container > .wrapper > .book > .page > .back > .pagination {
   position: fixed;
