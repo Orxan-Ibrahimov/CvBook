@@ -276,6 +276,8 @@
            
           }
           & > .pagination {
+            display: flex;
+            align-items: center;
             position: fixed;
             width: calc(100% - 2.4rem);
             top: calc(100% - 2.4rem);
@@ -299,6 +301,17 @@
 
             & > .next {
               left: calc(100% - 2.4rem);
+            }
+
+            & > .go-profile{
+              position: absolute;
+              right: 2.4rem;
+              color: $main-color;
+              font-size: x-large;
+
+              &:focus{
+                border: 0;
+              }
             }
           }
         }
