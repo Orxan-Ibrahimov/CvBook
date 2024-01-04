@@ -304,6 +304,27 @@ a, button {
   color: #00abf0;
   font-size: x-large;
 }
+.container > .wrapper > .book > .page > .front > .pagination > .go-profile > .profile-icon, .container > .wrapper > .book > .page > .back > .pagination > .go-profile > .profile-icon {
+  border: 1px solid #00abf0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+.container > .wrapper > .book > .page > .front > .pagination > .go-profile > .profile-text, .container > .wrapper > .book > .page > .back > .pagination > .go-profile > .profile-text {
+  font-size: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s all;
+}
+.container > .wrapper > .book > .page > .front > .pagination > .go-profile:hover > .profile-icon, .container > .wrapper > .book > .page > .back > .pagination > .go-profile:hover > .profile-icon {
+  background-color: #00abf0;
+  color: #fff;
+}
+.container > .wrapper > .book > .page > .front > .pagination > .go-profile:hover > .profile-text, .container > .wrapper > .book > .page > .back > .pagination > .go-profile:hover > .profile-text {
+  font-size: 1rem;
+}
 .container > .wrapper > .book > .page > .front > .pagination > .go-profile:focus, .container > .wrapper > .book > .page > .back > .pagination > .go-profile:focus {
   border: 0;
 }

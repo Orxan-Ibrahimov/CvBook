@@ -34,7 +34,7 @@ window.addEventListener("load", function (params) {
         console.log(page.nextElementSibling);
         if (page.nextElementSibling != null)
           page.nextElementSibling.style.zIndex = 1;
-        previousPage.style.zIndex = 4;
+          previousPage.style.zIndex = 4;
       }
     };
   });

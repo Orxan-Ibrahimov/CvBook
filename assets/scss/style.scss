@@ -309,6 +309,33 @@
               color: $main-color;
               font-size: x-large;
 
+              & > .profile-icon{
+                border: 1px solid $main-color;
+                padding: .2rem .4rem;
+                border-radius: .4rem;
+                font-size: 1rem;
+              }
+
+              & > .profile-text{
+                font-size: 0;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: .5s all;
+              }
+
+              &:hover{
+                & > .profile-icon{
+                  background-color: $main-color;
+                  color: $main-text-color;
+
+                }
+
+                & > .profile-text{
+                  font-size: 1rem;                 
+                }
+              }
               &:focus{
                 border: 0;
               }
