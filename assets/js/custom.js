@@ -6,9 +6,16 @@ let allPrevoiusButons = document.querySelectorAll(
 );
 let goProfile = document.querySelector(".pagination .go-profile");
 let count = 0;
+
+setTimeout(() => {
+  document.querySelector(".wrapper .cover-right").classList.add("turn");
+  goProfile.click();
+}, 1000);
+
+
+
 window.addEventListener("load", function (params) {
   allNextButons.forEach((next, index) => {
-    console.log();
     next.onclick = (element) => {
       let page = next.parentElement;
       while (!page.classList.contains("page")) {
@@ -16,7 +23,6 @@ window.addEventListener("load", function (params) {
       }
       let nextPage = page.nextElementSibling;
       page.classList.add("page-turned");
-      console.log(page.previousElementSibling);
       page.previousElementSibling.style.zIndex = 1;
       if (nextPage) nextPage.style.zIndex = 3;
     };
@@ -31,7 +37,6 @@ window.addEventListener("load", function (params) {
       page.classList.remove("page-turned");
       let previousPage = page.previousElementSibling;
       if (previousPage.classList.contains("page")) {
-        console.log(page.nextElementSibling);
         if (page.nextElementSibling != null)
           page.nextElementSibling.style.zIndex = 1;
           previousPage.style.zIndex = 4;
@@ -50,3 +55,4 @@ window.addEventListener("load", function (params) {
     }
   };
 });
+

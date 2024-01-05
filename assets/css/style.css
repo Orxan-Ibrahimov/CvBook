@@ -51,6 +51,8 @@ a, button {
   position: relative;
   width: 66rem;
   height: 44rem;
+  animation-name: TurningBook;
+  animation-duration: 1s;
 }
 .container > .wrapper > .cover {
   position: absolute;
@@ -61,9 +63,14 @@ a, button {
   background: linear-gradient(45deg, #00abf0, #006e9a);
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
   transform-origin: right;
+  transition: 0.5s all;
+}
+.container > .wrapper > .cover-right {
+  z-index: 10;
 }
 .container > .wrapper > .turn {
   transform: rotateY(180deg);
+  z-index: 1;
 }
 .container > .wrapper > .book {
   width: 100%;
@@ -341,4 +348,13 @@ a, button {
 }
 .container > .wrapper > .book > .page-right {
   left: 50%;
+}
+
+@keyframes TurningBook {
+  from {
+    transform: rotateZ(-90deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
 }/*# sourceMappingURL=style.css.map */
